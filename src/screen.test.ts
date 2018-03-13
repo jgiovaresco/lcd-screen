@@ -16,4 +16,12 @@ describe('display', () => {
   |`,
     );
   });
+
+  it('displays 2', () => {
+    expect(display(2)).toBe(
+      ` _ 
+ _|
+|_ `,
+    );
+  });
 });

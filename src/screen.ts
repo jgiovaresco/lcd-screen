@@ -6,10 +6,12 @@ const ONE = `
   |
   |`;
 
-export function display(digit: number): string {
-  if (1 === digit) {
-    return ONE;
-  }
+const TWO = ` _ 
+ _|
+|_ `;
 
-  return ZERO;
+const digits = [ZERO, ONE, TWO];
+
+export function display(digit: number): string {
+  return digits[digit];
 }
