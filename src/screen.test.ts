@@ -8,4 +8,12 @@ describe('display', () => {
 |_|`,
     );
   });
+
+  it('displays 1', () => {
+    expect(display(1)).toBe(
+      `   
+  |
+  |`,
+    );
+  });
 });
