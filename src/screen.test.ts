@@ -1,83 +1,104 @@
-import { display } from './screen';
+import { StringRenderer } from './renderer';
+import { Screen } from './screen';
 
 describe('display', () => {
-  it('displays 0', () => {
-    expect(display(0)).toBe(
-      ` _ 
+  let screen: Screen;
+  let renderer: StringRenderer;
+
+  beforeEach(() => {
+    renderer = new StringRenderer();
+    screen = new Screen(renderer);
+  });
+
+  describe('with one digit number', () => {
+    it('displays 0', () => {
+      screen.display(0);
+      expect(renderer.buffer).toBe(
+        ` _ 
 | |
 |_|`,
-    );
-  });
+      );
+    });
 
-  it('displays 1', () => {
-    expect(display(1)).toBe(
-      `   
+    it('displays 1', () => {
+      screen.display(1);
+      expect(renderer.buffer).toBe(
+        `   
   |
   |`,
-    );
-  });
+      );
+    });
 
-  it('displays 2', () => {
-    expect(display(2)).toBe(
-      ` _ 
+    it('displays 2', () => {
+      screen.display(2);
+      expect(renderer.buffer).toBe(
+        ` _ 
  _|
 |_ `,
-    );
-  });
+      );
+    });
 
-  it('displays 3', () => {
-    expect(display(3)).toBe(
-      ` _ 
+    it('displays 3', () => {
+      screen.display(3);
+      expect(renderer.buffer).toBe(
+        ` _ 
  _|
  _|`,
-    );
-  });
+      );
+    });
 
-  it('displays 4', () => {
-    expect(display(4)).toBe(
-      `   
+    it('displays 4', () => {
+      screen.display(4);
+      expect(renderer.buffer).toBe(
+        `   
 |_|
   |`,
-    );
-  });
+      );
+    });
 
-  it('displays 5', () => {
-    expect(display(5)).toBe(
-      ` _ 
+    it('displays 5', () => {
+      screen.display(5);
+      expect(renderer.buffer).toBe(
+        ` _ 
 |_ 
  _|`,
-    );
-  });
+      );
+    });
 
-  it('displays 6', () => {
-    expect(display(6)).toBe(
-      ` _ 
+    it('displays 6', () => {
+      screen.display(6);
+      expect(renderer.buffer).toBe(
+        ` _ 
 |_ 
 |_|`,
-    );
-  });
+      );
+    });
 
-  it('displays 7', () => {
-    expect(display(7)).toBe(
-      ` _ 
+    it('displays 7', () => {
+      screen.display(7);
+      expect(renderer.buffer).toBe(
+        ` _ 
   |
   |`,
-    );
-  });
+      );
+    });
 
-  it('displays 8', () => {
-    expect(display(8)).toBe(
-      ` _ 
+    it('displays 8', () => {
+      screen.display(8);
+      expect(renderer.buffer).toBe(
+        ` _ 
 |_|
 |_|`,
-    );
-  });
+      );
+    });
 
-  it('displays 9', () => {
-    expect(display(9)).toBe(
-      ` _ 
+    it('displays 9', () => {
+      screen.display(9);
+      expect(renderer.buffer).toBe(
+        ` _ 
 |_|
   |`,
-    );
+      );
+    });
   });
 });

@@ -1,18 +1,24 @@
 export class Digit {
-  private top: string[];
-  private middle: string[];
-  private bottom: string[];
+  private _top: string[];
+  private _middle: string[];
+  private _bottom: string[];
 
   constructor(top: string[], middle: string[], bottom: string[]) {
-    this.top = top;
-    this.middle = middle;
-    this.bottom = bottom;
+    this._top = top;
+    this._middle = middle;
+    this._bottom = bottom;
   }
 
-  public display(): string {
-    return `${this.top.join('')}
-${this.middle.join('')}
-${this.bottom.join('')}`;
+  get top(): string[] {
+    return this._top;
+  }
+
+  get middle(): string[] {
+    return this._middle;
+  }
+
+  get bottom(): string[] {
+    return this._bottom;
   }
 }
 
