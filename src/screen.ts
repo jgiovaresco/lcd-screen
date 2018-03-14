@@ -21,8 +21,8 @@ export class Screen {
     this.renderer = renderer;
   }
 
-  public display(digit: number) {
-    const digits = [DIGITS[digit]];
+  public display(num: number) {
+    const digits = [DIGITS[num]];
     this.renderer.render(digits);
   }
 }
