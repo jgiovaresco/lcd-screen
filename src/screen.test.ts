@@ -101,4 +101,15 @@ describe('display', () => {
       );
     });
   });
+
+  describe('with two digits number', () => {
+    it('displays 12', () => {
+      screen.display(12);
+      expect(renderer.buffer).toBe(
+        `    _ 
+  | _|
+  ||_ `,
+      );
+    });
+  });
 });

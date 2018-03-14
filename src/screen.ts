@@ -1,4 +1,5 @@
 import {
+  Digit,
   EIGHT,
   FIVE,
   FOUR,
@@ -22,7 +23,11 @@ export class Screen {
   }
 
   public display(num: number) {
-    const digits = [DIGITS[num]];
-    this.renderer.render(digits);
+    this.renderer.render(numberToDigits(num));
   }
+}
+
+function numberToDigits(n: number): Digit[] {
+  const stringNumber = n.toLocaleString();
+  return stringNumber.split('').map(num => DIGITS[parseInt(num, 10)]);
 }
