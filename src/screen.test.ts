@@ -112,4 +112,15 @@ describe('display', () => {
       );
     });
   });
+
+  describe('with 3 digits number', () => {
+    it('displays 123', () => {
+      screen.display(123);
+      expect(renderer.buffer).toBe(
+        `    _  _ 
+  | _| _|
+  ||_  _|`,
+      );
+    });
+  });
 });
