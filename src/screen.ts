@@ -12,7 +12,7 @@ import {
 } from './digit';
 import { IRenderer } from './renderer';
 
-const digits = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE];
+const DIGITS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE];
 
 export class Screen {
   private renderer: IRenderer;
@@ -22,6 +22,7 @@ export class Screen {
   }
 
   public display(digit: number) {
-    this.renderer.render(digits[digit]);
+    const digits = [DIGITS[digit]];
+    this.renderer.render(digits);
   }
 }
