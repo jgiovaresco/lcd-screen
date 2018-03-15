@@ -7,6 +7,7 @@
     "build": "tsc",
     "lint": "tslint -c tslint.json 'lib/**/*.ts' -t stylish",
     "precommit": "tsc && lint-staged",
+    "start": "tsc && node dist/cli.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -25,6 +26,8 @@
     "testPathIgnorePatterns": ["/build/"]
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
     "@types/jest": "^22.2.0",
     "@types/node": "^9.4.7",
     "husky": "^0.14.3",
@@ -36,5 +39,9 @@
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.10.0",
     "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "commander": "^2.15.0"
   }
 }
