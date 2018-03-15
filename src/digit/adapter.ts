@@ -15,6 +15,6 @@ import {
 const DIGITS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE];
 
 export function numberToDigits(n: number): Digit[] {
-  const stringNumber = n.toLocaleString();
+  const stringNumber = n.toString();
   return stringNumber.split('').map(num => DIGITS[parseInt(num, 10)]);
 }

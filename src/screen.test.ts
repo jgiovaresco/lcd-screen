@@ -123,4 +123,15 @@ describe('display', () => {
       );
     });
   });
+
+  describe('with more digits number', () => {
+    it('displays 1234567890', () => {
+      screen.display(1234567890);
+      expect(renderer.buffer).toBe(
+        `    _  _     _  _  _  _  _  _ 
+  | _| _||_||_ |_   ||_||_|| |
+  ||_  _|  | _||_|  ||_|  ||_|`,
+      );
+    });
+  });
 });
